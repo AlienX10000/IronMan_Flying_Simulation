@@ -117,17 +117,3 @@ function gameOver() {
     gameState=END
   }
 }
-
-function writeText() {
-  fill(rgb(255, 0, 0));
-  textSize(50);
-  stroke("black");
-  strokeWeight(5);
-  text("Simulation Over", ironMan.x+75, 350);
-
-  fill(255);
-  textSize(30);
-  stroke(rgb(22, 166, 164));
-  strokeWeight(4);
-  text("you hit a bird", ironMan.x+165, 400);
-}
