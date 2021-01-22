@@ -2,7 +2,7 @@ var PLAY=1;
 var END=0;
 var gameState=PLAY;
 
-var ironMan, background, ironManImg, backgroundImg, collide1, collide2, collide3, obj, objImg, objGroup;
+var ironMan, background, ironManImg, ironManImg2, backgroundImg, collide1, collide2, collide3, obj, objImg, objGroup;
 
 function preload() {
   backgroundImg = loadImage("images/city_background.png");
@@ -46,8 +46,8 @@ function draw() {
     ironMan.velocityX = 0;
     ironMan.velocityY = 0;
 
-    obj.velocityX = 0;
-    objGroup.lifetime = -1;
+    objGroup.setVelocityEach(0, 0);
+    objGroup.setLifetimeEach(-1)
 
   }
   
@@ -95,14 +95,14 @@ function movement() {
 }
 
 function bird() {
-  if (World.frameCount % 100 === 0) {
+  if (World.frameCount % 30 === 0 && gameState === PLAY) {
     objY = random(10, 600);
     obj = createSprite(ironMan.x + 800, objY,10,10);
     obj.addImage(objImg);
     obj.scale = 0.15;
-    obj.velocityX = -7;
-    objGroup.lifetime = 70;
     objGroup.add(obj)
+    objGroup.setVelocityEach(-7, 0);
+    objGroup.setLifetimeEach(35)
   }
 }
 
