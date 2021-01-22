@@ -2,7 +2,7 @@ var PLAY=1;
 var END=0;
 var gameState=PLAY;
 
-var ironMan, background, ironManImg, ironManImg2, backgroundImg, collide1, collide2, collide3, obj, objImg, objGroup;
+var ironMan, background, ironManImg, backgroundImg, collide1, collide2, collide3, obj, objImg, objGroup;
 
 function preload() {
   backgroundImg = loadImage("images/city_background.png");
