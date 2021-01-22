@@ -8,7 +8,6 @@ function preload() {
   backgroundImg = loadImage("images/city_background.png");
 
   ironManImg = loadImage("images/iron-man-flying.png");
-  ironManImg2 = loadAnimation("images/iron-man-hover.png");
 
   objImg = loadImage("images/birdObj.png");
 }
